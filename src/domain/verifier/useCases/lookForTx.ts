@@ -22,6 +22,7 @@ export function getExplorersByChain (chain: SupportedChains, certificateVersion:
     case BLOCKCHAINS[SupportedChains.Ethmain].code:
     case BLOCKCHAINS[SupportedChains.Ethropst].code:
     case BLOCKCHAINS[SupportedChains.Ethrinkeby].code:
+    case BLOCKCHAINS[SupportedChains.Ethbloxberg].code:
       return explorerAPIs.ethereum;
   }
 

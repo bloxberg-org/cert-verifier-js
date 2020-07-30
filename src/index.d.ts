@@ -13,6 +13,7 @@ export enum SupportedChains {
   Ethmain = 'ethmain',
   Ethropst = 'ethropst',
   Ethrinkeby = 'ethrinkeby',
+  Ethbloxberg = 'ethbloxberg',
   Mocknet = 'mocknet',
   Regtest = 'regtest',
   Testnet = 'testnet'

@@ -3,7 +3,8 @@ enum TRANSACTION_APIS {
   blockcypher = 'blockcypher',
   blockexplorer = 'blockexplorer',
   blockstream = 'blockstream',
-  etherscan = 'etherscan'
+  etherscan = 'etherscan',
+  blockscout = 'blockscout'
 }
 
 const TRANSACTION_ID_PLACEHOLDER = '{transaction_id}';
