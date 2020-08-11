@@ -18,6 +18,8 @@ function getMerkleRoot2019Chain (anchor): IBlockchainObject {
   if (chainIndex > -1) {
     const chainCode = dataArray[chainIndex];
     const network = dataArray[chainIndex + 1];
+    console.log(chainCode + 'chaincode')
+    console.log('network' + network)
     const chainCodeSignatureValue = supportedChainsMap[chainCode].chainName.toLowerCase() + capitalize(network);
     return getChainObject(chainCodeSignatureValue);
   } else {
@@ -53,6 +55,7 @@ export default function getChain (address, signature = null): IBlockchainObject 
   if (cleanedSignature.anchors) {
     const anchors = cleanedSignature.anchors;
     const anchor = anchors[0];
+    console.log(anchor)
     if (anchor.chain) {
       const chainCodeSignatureValue = anchor.chain;
       return getChainObject(chainCodeSignatureValue);
