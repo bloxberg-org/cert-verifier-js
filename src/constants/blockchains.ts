@@ -65,7 +65,7 @@ const BLOCKCHAINS: {[chain in SupportedChains]: IBlockchainObject} = {
   [SupportedChains.Ethbloxberg]: {
     code: SupportedChains.Ethbloxberg,
     name: 'Ethereum',
-    //prefixes: ['0x'],
+    prefixes: ['0x'],
     signatureValue: 'ethereumBloxberg',
     transactionTemplates: {
       full: `https://blockexplorer.bloxberg.org/tx/${TRANSACTION_ID_PLACEHOLDER}`,
