@@ -117,6 +117,19 @@ describe('domain certificates get chain use case test suite', function () {
           expect(result).toEqual(chainAssertion);
         });
       });
+
+      describe('and the network is bloxberg', function () {
+        it('should return ethereum bloxberg value', function () {
+          const fixtureSignature = {
+            anchors: [
+              'blink:eth:bloxberg:0x23e3e18bf03032be07ecb6ea033c11979ccb974e8dd140ee92a23d4a94f8c49c'
+            ]
+          };
+          const result = domain.certificates.getChain(fixtureAddress, fixtureSignature);
+          const chainAssertion = BLOCKCHAINS.ethbloxberg;
+          expect(result).toEqual(chainAssertion);
+        });
+      });
     });
   });
 

@@ -23,6 +23,7 @@ import TestnetTamperedHashes from './v2/testnet-tampered-hashes-2.0';
 import TestnetV1Valid from './v1/testnet-valid-1.2';
 import TestnetV2Valid from './v2/testnet-valid-2.0';
 import TestnetV2ValidV1Issuer from './v2/testnet-valid-v1-issuer-2.0';
+import BlockcertsBloxberg from './v3/bloxberg.json'
 
 export default {
   BlockcertsV3Alpha,
@@ -30,6 +31,7 @@ export default {
   BlockcertsV3AlphaCustomContext,
   BlockcertsV3AlphaTampered,
   BlockcertsV3AlphaNoIssuerProfile,
+  BlockcertsBloxberg,
   EthereumMainV2Valid,
   EthereumMainInvalidMerkleRoot,
   EthereumMainRevoked,

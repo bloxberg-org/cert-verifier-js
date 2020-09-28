@@ -14,10 +14,10 @@ const versionVerificationMap = {
     SUB_STEPS.parseIssuerKeys,
     SUB_STEPS.compareHashes,
     SUB_STEPS.checkMerkleRoot,
-    SUB_STEPS.checkReceipt,
-    SUB_STEPS.checkRevokedStatus,
-    SUB_STEPS.checkAuthenticity,
-    SUB_STEPS.checkExpiresDate
+    SUB_STEPS.checkReceipt
+    //SUB_STEPS.checkRevokedStatus,
+    //SUB_STEPS.checkAuthenticity
+    //SUB_STEPS.checkExpiresDate
   ],
   [NETWORKS.testnet]: [
     SUB_STEPS.computeLocalHash,

@@ -13,6 +13,7 @@ export enum SupportedChains {
   Ethmain = 'ethmain',
   Ethropst = 'ethropst',
   Ethrinkeby = 'ethrinkeby',
+  Ethbloxberg = 'ethbloxberg',
   Mocknet = 'mocknet',
   Regtest = 'regtest',
   Testnet = 'testnet'
@@ -24,6 +25,7 @@ export enum TRANSACTION_APIS {
   blockexplorer = 'blockexplorer',
   blockstream = 'blockstream',
   etherscan = 'etherscan',
+  blockscout = 'blockscout'
 }
 
 export type TExplorerParsingFunction = ((jsonResponse, chain?: SupportedChains) => TransactionData) | ((jsonResponse, chain?: SupportedChains) => Promise<TransactionData>);

@@ -8,6 +8,7 @@ import { TransactionData } from '../models/TransactionData';
 import { ExplorerAPI } from '../certificate';
 import { explorerApi as EtherscanApi } from './ethereum/etherscan';
 import { explorerApi as BlockCypherETHApi } from './ethereum/blockcypher';
+import { explorerApi as BlockscoutApi } from './ethereum/blockscout';
 import { explorerApi as BlockExplorerApi } from './bitcoin/blockexplorer';
 import { explorerApi as BlockstreamApi } from './bitcoin/blockstream';
 import { explorerApi as BlockCypherBTCApi } from './bitcoin/blockcypher';
@@ -58,7 +59,8 @@ const BitcoinTransactionAPIArray = [
 
 const EthereumTransactionAPIArray = [
   EtherscanApi,
-  BlockCypherETHApi
+  BlockCypherETHApi,
+  BlockscoutApi
 ];
 
 const BlockchainExplorersWithSpentOutputInfo = [

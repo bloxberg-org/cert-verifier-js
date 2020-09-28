@@ -47,6 +47,14 @@ describe('Verifier domain lookForTx use case test suite', function () {
         });
       });
 
+      describe('and the chain is Ethereum bloxberg', function () {
+        it('should use the ethereum specific explorers', function () {
+          const selectedSelectors = getExplorersByChain(SupportedChains.Ethbloxberg, CERTIFICATE_VERSIONS.V2_0, getDefaultExplorers());
+          // because they are wrapped, we don't necessarily have the deep nature of the result, so we use a weak test to ensure
+          expect(selectedSelectors.length).toBe(3);
+        });
+      });
+
       describe('and the chain is Bitcoin mainnet', function () {
         it('should use the bitcoin specific explorers', function () {
           const selectedSelectors = getExplorersByChain(SupportedChains.Bitcoin, CERTIFICATE_VERSIONS.V2_0, getDefaultExplorers());

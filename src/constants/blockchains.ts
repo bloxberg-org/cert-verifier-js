@@ -5,6 +5,7 @@ export enum SupportedChains {
   Ethmain = 'ethmain',
   Ethropst = 'ethropst',
   Ethrinkeby = 'ethrinkeby',
+  Ethbloxberg = 'ethbloxberg',
   Mocknet = 'mocknet',
   Regtest = 'regtest',
   Testnet = 'testnet'
@@ -59,6 +60,16 @@ const BLOCKCHAINS: {[chain in SupportedChains]: IBlockchainObject} = {
     transactionTemplates: {
       full: `https://rinkeby.etherscan.io/tx/${TRANSACTION_ID_PLACEHOLDER}`,
       raw: `https://rinkeby.etherscan.io/getRawTx?tx=${TRANSACTION_ID_PLACEHOLDER}`
+    }
+  },
+  [SupportedChains.Ethbloxberg]: {
+    code: SupportedChains.Ethbloxberg,
+    name: 'bloxberg',
+    //prefixes: ['0x'],
+    signatureValue: 'ethereumBloxberg',
+    transactionTemplates: {
+      full: `https://blockexplorer.bloxberg.org/tx/${TRANSACTION_ID_PLACEHOLDER}`,
+      raw: `https://blockexplorer.bloxberg.org/api/api?module=transaction&action=gettxinfo&txhash=${TRANSACTION_ID_PLACEHOLDER}`
     }
   },
   [SupportedChains.Mocknet]: {

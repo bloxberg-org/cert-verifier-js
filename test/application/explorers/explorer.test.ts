@@ -161,7 +161,7 @@ describe('Blockchain Explorers test suite', function () {
           };
           const output = getDefaultExplorers([fixtureExplorer]);
           expect(output.bitcoin.length).toBe(4);
-          expect(output.ethereum.length).toBe(2);
+          expect(output.ethereum.length).toBe(3);
           expect(output.v1.length).toBe(1);
         });
       });
