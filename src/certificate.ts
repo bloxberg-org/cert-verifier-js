@@ -82,6 +82,7 @@ export default class Certificate {
 
   async parseJson (certificateDefinition): Promise<void> {
     const parsedCertificate: ParsedCertificate = await parseJSON(certificateDefinition);
+    console.log(parsedCertificate)
     if (!parsedCertificate.isFormatValid) {
       throw new Error(parsedCertificate.error);
     }

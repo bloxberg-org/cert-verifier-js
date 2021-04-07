@@ -14,6 +14,7 @@ const {
   blockcertsv1_2: BLOCKCERTSV1_2_CONTEXT,
   blockcertsv2: BLOCKCERTSV2_CONTEXT,
   blockcertsV3: BLOCKCERTSV3_CONTEXT,
+  bloxbergV1: BLOXBERGV1_CONTEXT,
   verifiableCredential: VERIFIABLE_CREDENTIAL_CONTEXT,
   verifiableCredentialExample: VERIFIABLE_CREDENTIAL_EXAMPLE,
   merkleProof2019: MERKLE_PROOF_2019
@@ -31,6 +32,14 @@ CONTEXTS['https://w3id.org/blockcerts/v1'] = BLOCKCERTSV1_2_CONTEXT;
 // V3
 CONTEXTS['https://www.blockcerts.org/schema/3.0-alpha/context.json'] = BLOCKCERTSV3_CONTEXT;
 CONTEXTS['https://w3id.org/blockcerts/schema/3.0-alpha/context.json'] = BLOCKCERTSV3_CONTEXT;
+CONTEXTS['https://www.w3.org/2018/credentials/v1'] = VERIFIABLE_CREDENTIAL_CONTEXT;
+CONTEXTS['https://www.w3.org/2018/credentials/examples/v1'] = VERIFIABLE_CREDENTIAL_EXAMPLE;
+CONTEXTS['https://w3id.org/blockcerts/schema/3.0-alpha/merkleProof2019Context.json'] = MERKLE_PROOF_2019;
+CONTEXTS['https://www.blockcerts.org/schema/3.0-alpha/merkleProof2019Context.json'] = MERKLE_PROOF_2019;
+
+// Bloxberg
+CONTEXTS['https://qa.certify.bloxberg.org/research_object_certificate_v1'] = BLOXBERGV1_CONTEXT;
+// CONTEXTS['https://w3id.org/blockcerts/schema/3.0-alpha/context.json'] = BLOXBERGV1_CONTEXT;
 CONTEXTS['https://www.w3.org/2018/credentials/v1'] = VERIFIABLE_CREDENTIAL_CONTEXT;
 CONTEXTS['https://www.w3.org/2018/credentials/examples/v1'] = VERIFIABLE_CREDENTIAL_EXAMPLE;
 CONTEXTS['https://w3id.org/blockcerts/schema/3.0-alpha/merkleProof2019Context.json'] = MERKLE_PROOF_2019;

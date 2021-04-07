@@ -4,7 +4,7 @@ import signatureAssertion from '../../assertions/v3.0-alpha-learningmachine-sign
 import issuerProfileAssertion from '../../assertions/v3.0-alpha-issuer-profile';
 import verificationStepsV3 from '../../assertions/verification-steps-v3';
 
-const assertionTransactionId = '0xc46050a5cc05cc6a7c9588598960253a3827c335f89414e3c1d8016fd639d73d';
+const assertionTransactionId = '0x4f17629a907a745f299ac432464d8c880a4ba6dd1a30340a396b861b15c06e73';
 
 describe('Certificate entity test suite', function () {
   const fixture = FIXTURES.BlockcertsBloxberg;
@@ -23,7 +23,7 @@ describe('Certificate entity test suite', function () {
       });
 
       it('should set version to the certificate object', function () {
-        expect(certificate.version).toBe(CERTIFICATE_VERSIONS.V3_0_alpha);
+        expect(certificate.version).toBe(CERTIFICATE_VERSIONS.V1_0_bloxberg);
       });
 
       it('should set the decoded signature as the receipt to the certificate object', function () {
@@ -67,7 +67,7 @@ describe('Certificate entity test suite', function () {
       });
 
       it('should set the rawTransactionLink property', function () {
-        const rawTransactionLinkAssertion = `https://blockexplorer.bloxberg.org/tx${assertionTransactionId}`;
+        const rawTransactionLinkAssertion = `https://blockexplorer.bloxberg.org/tx/${assertionTransactionId}`;
         expect(certificate.rawTransactionLink).toEqual(rawTransactionLinkAssertion);
       });
 

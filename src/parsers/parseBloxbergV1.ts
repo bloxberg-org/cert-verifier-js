@@ -1,7 +1,7 @@
 import { Decoder } from '@vaultie/lds-merkle-proof-2019';
 import { CERTIFICATE_VERSIONS } from '../constants';
 import domain from '../domain';
-import { BlockcertsV3 } from '../models/BlockcertsV3';
+import { BloxbergV1 } from '../models/BloxbergV1';
 
 function parseSignature (signature): any { // TODO: define v3 signature type
   const base58Decoder = new Decoder(signature.proofValue);
@@ -23,7 +23,7 @@ async function getIssuerProfile (issuer): Promise<any> { // TODO: define issuer 
   return profile;
 }
 
-export default async function parseV3 (certificateJson): Promise<BlockcertsV3> {
+export default async function parseBloxbergV1 (certificateJson): Promise<BloxbergV1> {
   const receipt = parseSignature(certificateJson.proof);
   const { issuer: issuerProfileUrl, metadataJson, issuanceDate, id, expirationDate } = certificateJson;
   const issuer = await getIssuerProfile(issuerProfileUrl);
@@ -37,6 +37,6 @@ export default async function parseV3 (certificateJson): Promise<BlockcertsV3> {
     receipt,
     recipientFullName: getRecipientFullName(certificateJson),
     recordLink: getRecipientSubjectID(certificateJson),
-    version: CERTIFICATE_VERSIONS.V3_0_alpha
+    version: CERTIFICATE_VERSIONS.V1_0_bloxberg
   };
 }

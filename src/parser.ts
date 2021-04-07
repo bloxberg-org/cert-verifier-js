@@ -9,8 +9,12 @@ function retrieveBlockcertsVersion (context): number {
     context = [context];
   }
 
-  const blockcertsContext = context.filter(ctx => typeof ctx === 'string').find(ctx => ctx.toLowerCase().indexOf('blockcerts') > 0);
+  // const blockcertsContext = context.filter(ctx => typeof ctx === 'string').find(ctx => ctx.toLowerCase().indexOf('blockcerts') > 0);
+  const blockcertsContext = context.filter(ctx => typeof ctx === 'string').find(ctx => ctx.toLowerCase().indexOf('bloxberg') > 0);
+
+  console.log(blockcertsContext)
   const blockcertsContextArray: string[] = blockcertsContext.split('/').filter(str => str !== '');
+  console.log(blockcertsContextArray)
 
   const availableVersions: string[] = Object.keys(versionParserMap);
 
@@ -48,6 +52,7 @@ export interface ParsedCertificate extends ParsedCertificateValidityFormat {
 export default async function parseJSON (certificateJson): Promise<ParsedCertificate> {
   try {
     const version: number = retrieveBlockcertsVersion(certificateJson['@context']);
+    console.log(version)
     const parsedCertificate = await versionParserMap[version](certificateJson);
     parsedCertificate.isFormatValid = true;
     return parsedCertificate;

@@ -1,6 +1,6 @@
 const formatValidation = 'formatValidation';
 const hashComparison = 'hashComparison';
-const statusCheck = 'statusCheck';
+// const statusCheck = 'statusCheck';
 const final = 'final';
 
 const language = {
@@ -21,5 +21,5 @@ const language = {
   // }
 };
 
-//export { final, formatValidation, hashComparison, statusCheck, language };
+// export { final, formatValidation, hashComparison, statusCheck, language };
 export { final, formatValidation, hashComparison, language };
