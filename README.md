@@ -1,4 +1,4 @@
-# @blockcerts/cert-verifier-js
+# @bloxberg-org/cert-verifier-js
 
 [![Build Status](https://travis-ci.com/blockchain-certificates/cert-verifier-js.svg?branch=master)](https://travis-ci.com/blockchain-certificates/cert-verifier-js)
 [![codecov](https://codecov.io/gh/blockchain-certificates/cert-verifier-js/branch/master/graph/badge.svg)](https://codecov.io/gh/blockchain-certificates/cert-verifier-js)
@@ -11,7 +11,7 @@ A library to parse and verify [Research Object Certificates](https://www.bloxber
 ## Install
 
 ```shell
-$ npm i @blockcerts/cert-verifier-js
+$ npm i @bloxberg-org/cert-verifier-js
 ```
 
 ## Import
@@ -22,7 +22,7 @@ While you would import the `Certificate` constructor and instantiate identically
 
 Example:
 ```javascript
-import { Certificate } from '@blockcerts/cert-verifier-js';
+import { Certificate } from '@bloxberg-org/cert-verifier-js';
 let certificate = new Certificate(certificateDefinition);
 await certificate.init();
 ```  
@@ -32,26 +32,26 @@ await certificate.init();
 Exposed by default:
 
 ```javascript
-const { Certificate } = require('@blockcerts/cert-verifier-js');
+const { Certificate } = require('@bloxberg-org/cert-verifier-js');
 var certificate = new Certificate(certificateDefinition);
 ```
 
 ### Running in Nodejs
 ```javascript
-const { Certificate } = require('@blockcerts/cert-verifier-js/lib');
+const { Certificate } = require('@bloxberg-org/cert-verifier-js/lib');
 var certificate = new Certificate(certificateDefinition);
 ```
 
 #### ES module
 ```javascript
-import { Certificate } from '@blockcerts/cert-verifier-js';
+import { Certificate } from '@bloxberg-org/cert-verifier-js';
 let certificate = new Certificate(certificateDefinition);
 ```
 
 #### Script tag (iife)
 [Check an example here](https://github.com/blockchain-certificates/cert-verifier-js/blob/master/test/e2e/script-tag.html)
 ```html
-<script src='node_modules/@blockcerts/cert-verifier-js/dist/verifier-iife.js'></script>
+<script src='node_modules/@bloxberg-org/cert-verifier-js/dist/verifier-iife.js'></script>
 <script>
   var certificate = new Verifier.Certificate(certificateDefinition);
 </script>
